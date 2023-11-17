@@ -1,0 +1,29 @@
+/*
+ * This class will call a method that will print out predetermined numbers
+ */
+public class SimpleLoop {
+
+	public static void main(String[] args) 
+	{
+		//call method to count the numbers
+		countSomeNums();
+		
+
+	}
+
+	private static void countSomeNums() {
+		for (int i=-4; i<=86; i+=18)
+		//declare int i assign -4 as its value
+		// set condition to check if the value is less than or equal to 86
+		
+		{
+		
+		System.out.println(i);
+		// if condition is true, i is printed
+		// once work is completed, go back to increment, add 18 to value
+		//if condition is true after adding 18, print i
+		
+		}
+	}
+
+}
