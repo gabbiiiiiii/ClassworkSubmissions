@@ -1,0 +1,43 @@
+/** 
+ * This is a main class. It is used to generate multiple baked goods that we will define the
+ * behavior of their own classes. Here, all we'll do is create the baked goods.
+ * And maybe print some info.
+ */
+public class BakeryMain 
+	{
+
+	/**
+	 * The main method is a method that always runs whenever the classes run. We don't need
+	 * to call its name, it just runs.
+	 * 
+	 * This is the method where we will instantiate new baked goods and also print stuff.
+	 * 
+	 * 
+	 * @param args (idk why this is needed)
+	 */
+	public static void main(String[] args) 
+	{
+    
+    //create methods to carry out specific tasks
+		
+		Cake myFirstCake = new Cake ("chocolate");
+		
+		Cake.tellifTasty();
+    //this method tells the user that the cake is tasty + this method is static because this statement should print with every cake
+		
+		myFirstCake.getFlavor();
+    //this method gets the flavor of the cake and forms a print statement telling the user the flavor
+		
+		myFirstCake.getLayers();
+    //this method determines the amount of layers the cake contains and forms a print statement to tell the user
+		
+		myFirstCake.incrementLayer();
+		//this method adds one additional layer to the set amount
+
+		myFirstCake.setFlavor();
+    //this method formats the code so that the cake is one that the user can input
+		
+		
+	}
+
+}
