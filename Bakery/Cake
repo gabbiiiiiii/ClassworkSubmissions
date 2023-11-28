@@ -1,0 +1,54 @@
+/*
+ * This class defines the qualities and behaviors of a cake.
+ * It also tells the user that the cake is tasty.
+ */
+public class Cake 
+{
+
+	String flavor = new String ("chocolate");
+	
+	int layers;
+	
+	public Cake (String flavor, int layers)
+	
+	{
+		this.flavor = flavor;
+		this.layers = layers;
+	}
+	
+	public Cake (String flavor)
+	{
+		this.layers = 1;
+	}
+
+	public static void tellifTasty() 
+	{
+		
+		System.out.println("The cake is tasty");
+		
+	}
+
+	public void getFlavor() 
+	{
+		
+		System.out.println("This is a " + this.flavor + " cake");
+		
+	}
+
+	public int getLayers() 
+	{
+		System.out.println("This cake has " + this.layers + " layers");
+		
+	}
+
+	public int incrementLayer(int layers) 
+	{
+		return layers++;
+		
+		}
+		
+	}
+	
+
+	
+}
