@@ -2,8 +2,11 @@
  * This class defines the qualities and behaviors of a cake.
  * It also tells the user that the cake is tasty.
  */
+
 public class Cake 
 {
+
+	//instantiate string flavor and int layers
 
 	String flavor = new String ("chocolate");
 	
@@ -41,14 +44,17 @@ public class Cake
 		
 	}
 
-	public int incrementLayer(int layers) 
-	{
+	public int incrementLayer(int layers) {
+
 		return layers++;
+	}
+
+	public String setFlavor(String flavor) {
 		
-		}
+		return this.flavor; 
 		
 	}
-	
-
+		
+	}
 	
 }
