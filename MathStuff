@@ -1,0 +1,67 @@
+/*
+ * This class will take two nums and multiply them without using an astrisk
+ */
+public class MathStuff {
+
+	public static void main(String[] args) {
+		
+		//declare two numbers to test Math methods on
+		 
+		int myInt = -4;
+		double myDub = -16.0;
+		
+		//test the sqrt method, it should find the square root
+		double mySqrt = Math.sqrt(myDub);
+		
+		System.out.println(mySqrt);
+		
+		//test the abs method. it should produce what?
+		
+		double myAbsDub = Math.abs(myDub);
+		System.out.println(myAbsDub);
+		
+		double myAbsInt = Math.abs(myInt);
+		System.out.println(myAbsInt);
+		
+		//test the pow method. it raises the first number
+		//to the power of second number
+		//it only returns doubles
+		double base = 2.0;
+		double exp = 5.0;
+		double prod = Math.pow(base,exp);
+		System.out.println(prod);
+		
+		double myRandomDub = Math.random(myRandomDub);
+		
+		Random random = new Random();
+		int rand = 0;
+		while (true) {
+			rand = random.nextInt(11);
+			
+		if(rand !=0) break;
+		}
+		System.out.println(rand);
+		
+		//method to multiply 5 and 2
+		multTwoNums(5, 2);
+		
+	}
+
+	public static void multTwoNums(int x, int y) 
+	//this method will 
+	{
+		int adder = x;
+		
+		for (int i = 1; i<= y; i++) {
+			
+			x*=adder;
+			System.out.println(x);
+			
+			
+		}
+		
+
+		
+	}
+
+}
