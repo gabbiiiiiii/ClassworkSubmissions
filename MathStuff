@@ -1,9 +1,15 @@
 /*
  * This class will take two nums and multiply them without using an astrisk
  */
+import java.util.Random;
 public class MathStuff {
 
 	public static void main(String[] args) {
+		
+		int q = 7;
+		int r = 2;
+		int integerSum = multTwoIntegers (q,r);
+		System.out.println( integerSum );
 		
 		//declare two numbers to test Math methods on
 		 
@@ -26,28 +32,104 @@ public class MathStuff {
 		//test the pow method. it raises the first number
 		//to the power of second number
 		//it only returns doubles
-		double base = 2.0;
-		double exp = 5.0;
+		int base = 2;
+		int exp = 5;
 		double prod = Math.pow(base,exp);
 		System.out.println(prod);
 		
-		double myRandomDub = Math.random(myRandomDub);
+		//TASK 1: Instantiate an Integer object
+		Integer myInteger = 4;
 		
+		System.out.println(Integer.MIN_VALUE);
+		System.out.println(Integer.MAX_VALUE);
+		
+		//TASK 2: Instantiate a Double object
+		Double myDouble = 6.6;
+		
+		//print out the max and min values a Double object can store
+		System.out.println(Double.MAX_VALUE);
+		System.out.println(Double.MIN_VALUE);
+		
+		//TASK 3: Declare an int and print it as a double
+		int a = 5;
+		
+		System.out.println((double) a);
+		
+		//TASK 4: Declare a double and print it as an int
+		double b = 6.2;
+		System.out.println((int)b);
+		
+		//BELOW ARE THE MATH TASKS FROM SCHOOLOGY ASSIGNMENT
+		
+		//task 1: create a method that generates a random number 1-10 inclusive
 		Random random = new Random();
 		int rand = 0;
-		while (true) {
+		while (true) 
+		{
 			rand = random.nextInt(11);
-			
-		if(rand !=0) break;
+			if (rand != 0) break;
 		}
+		
 		System.out.println(rand);
 		
-		//method to multiply 5 and 2
-		multTwoNums(5, 2);
+		//task 2: declare two ints called intA and intB that have values of 
+		//-36 and +12 respectively
+		int intA = -36;
+		int intB = 12;
+		
+		//task 3: declare two doubles called dubA and dubB that have values
+		//of -100.0 and 0.64 respectively
+		double dubA = -100.0;
+		double dubB = 0.64;
+		
+		//task 4: instantiate two Integer objects called integerA and integerB with 
+		//the same values as the ints
+		Integer integerA = -36;
+		Integer integerB = 12;
+		
+		//task 5: instantiate two double objects called doubleA and
+		//doubleB with the same value as the doubles
+		Double doubleA = -100.0;
+		Double doubleB = 0.64;
+		
+	
+		//task 6: use method to print out one int raised to the power of the other int
+		multTwoNums(intA, intB);
+		
+		//task 7: use method to print out one Integer raised to the power of the other Integer
+		multTwoNums(integerA, integerB);
+		
+		//task 8: use method to print out one double raised to the power of the other double
+		//how can this method work with DOUBLES? without changing this method, how can I make this work???
+		multTwoNums(dubA, dubB);
+		
+		//task 9: use the method to print out one Double raised to the power of the other Double
+		multTwoNums(doubleA, doubleB);
+		
+		//task 10: print out the absolute value of intA, integerA, dubA, and doubleA
+		
+		System.out.println(Math.abs(intA));
+		
+		System.out.println(Math.abs(integerA));
+		
+		System.out.println(Math.abs(dubA));
+		
+		System.out.println(Math.abs(doubleA));
+		
+		//task 11: print out the square root of dubB and doubleB
+		
+		System.out.println(Math.sqrt(dubB));
+		
+		System.out.println(Math.sqrt(doubleB));
+		
+		//task 12: print out the square root of the absolute vale of intA and integerA
+		System.out.println(Math.sqrt(Math.abs(intA)));
+		
+		System.out.println(Math.sqrt(Math.abs(integerA)));
 		
 	}
 
-	public static void multTwoNums(int x, int y) 
+	public static void multTwoInts(int x, int y) 
 	//this method will 
 	{
 		int adder = x;
@@ -58,6 +140,28 @@ public class MathStuff {
 			System.out.println(x);
 			
 			
+		}
+		
+	/*
+	 * this method takes in two Integer objects and returns their sum
+	 * as an int
+	 * @param a the first additive
+	 * @param b the second additive
+	 * @return the sum of a and b as an int
+	 */
+	public static void multTwoIntegers(Integer x, Integer y) 
+			//this method will 
+			{
+				int adder = x;
+				
+				for (int i = 1; i<= y; i++) {
+					
+					x*=adder;
+					System.out.println(x);
+					
+					int q = 7;
+					int r = 2;
+					
 		}
 		
 
