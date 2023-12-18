@@ -1,29 +1,75 @@
-/*
- * This class will call a method that will print out predetermined numbers
- */
-public class SimpleLoop {
+import java.util.Scanner;
 
-	public static void main(String[] args) 
-	{
-		//call method to count the numbers
-		countSomeNums();
+public class IfsAndLoops {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
 		
+		//create a scanner that will scan ints to tell whether 
+		//they are even, odd, or different
+		Scanner consoleReader = new Scanner(System.in);
+		
+		//scan in ints x and y
+		int x = consoleReader.nextInt();
+		
+		int y = consoleReader.nextInt();
+		
+		//this method will print if two ints are even, odd, or
+		//different
+		printEvenOrOdd(x, y);
+		
+		//this method will print the exponent table of x to the y
+		//if either number is negative, an error message will be printed
+		printExpTable(x,y);
+		
+		//this method will return the factorial of a number
+		//if it is negative, print an error message & return -1
+		getFact(x,y);
 
 	}
 
-	private static void countSomeNums() {
-		for (int i=-4; i<=86; i+=18)
-		//declare int i assign -4 as its value
-		// set condition to check if the value is less than or equal to 86
-		
+	private static void getFact(int x, int y) 
+	{
+		for ()
+	}
+
+	private static void printExpTable(int x, int y) 
+	{
+		if (x>0 && y>0)
 		{
-		
-		System.out.println(i);
-		// if condition is true, i is printed
-		// once work is completed, go back to increment, add 18 to value
-		//if condition is true after adding 18, print i
-		
+		//pass int x as the base and int y as the exponent
+		int base = x;
+		int exp = y;
+		//equation that will give us the product
+		double prod = Math.pow(base, exp);
+		//print x to the y power
+		System.out.println(x + " to the power of " + y + " is " + prod);
+		}
+		else 
+		{
+			System.out.println("Sorry, I don't know how to do that yet.");
 		}
 	}
+
+	private static void printEvenOrOdd(int x, int y) {
+		if (x % 2 == 0 && y % 2 == 0)
+		{
+			System.out.println(x + " and " + y + " are both even.");
+		}
+		else if (x % 2 != 0 && y % 2 != 0)
+		{
+			System.out.println( x + " and " + y + " are both odd.");
+		}
+		else if (x % 2 == 0 && y % 2 != 0)
+		{
+			System.out.println( x + " is even and " + y + " is odd.");
+		}
+		else if (x % 2 != 0 && y % 2 == 0)
+		{
+			System.out.println(x + " is odd and " + y + " is even.");
+		}
+		
+	}
+	
 
 }
