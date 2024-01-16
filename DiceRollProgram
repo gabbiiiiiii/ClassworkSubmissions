@@ -1,0 +1,48 @@
+
+public class DiceRollProgram {
+
+	public static void main(String[] args) {
+		// Make a line that prints an int 1-17 inclusive. Roll it 200 times.
+		
+		int i = 1;
+		
+		while (i<=200)
+		{
+			System.out.println((int)(Math.random()*17+1));
+			i++;
+		
+		//Create a method with two formal parameters: a String object and a char. 
+		//Call this method "countChars." This method should count how many times the 
+		//char shows up in the String and return that number.
+
+		}
+		
+		String name1 = "helen keller";
+		char char1 = 'e';
+		
+		//set an int equal to a method and give the method parameters of name1, char1
+		int n = countChars(name1, char1);
+		
+		System.out.println("number of character is " + n);
+	
+	}
+
+	private static int countChars(String name1, char char1) 
+	{
+		// set an int equal to 0
+		int x = 0;
+		
+		//create a for loop 
+		for (int i= 0; i< name1.length();i++)
+		{
+			if(name1.charAt(i) == char1)
+			{
+				x++;
+			}
+			
+		}
+		return x;
+		
+	}
+
+}
