@@ -13,25 +13,34 @@ public class Pseudocode {
 		//Instantiate the user's input as a string
 		String userInput = new String(numberScanner.nextLine());
 		
+		//this method takes in a phrase that has two numbers with a char 'd' between the two
+		//
 		splitString(userInput);
 		
-		
-		
-		//Close scanner
-		numberScanner.close();
-		
-		
+
 		//create a method that takes a phrase and combines it without a space
-		String phrase = "my test is hard";
 		char space = (' ');
 		
+		//print statement that asks user for a phrase with spaces that the code will take in 
+		System.out.println("Please enter a phrase with one or more spaces.");
 		
+		//set the phrase inputted by the user to a string that can be used during methods
+		String phrase = new String (numberScanner.nextLine());
 	
+		//declare an int that is the countChars method
+		//when this int is utilized, it will run the codde within the method
 		int numberOfSpaces = countChars(phrase, space);
+		
+		//print statement that tells the user the amount of spaces that are in 
+		//the phrase they input
 		System.out.println("There are " +  numberOfSpaces + " spaces in this phrase.");
 		
+		
+		//print statement that is the product of the removeSpaces method
 		System.out.println(removeSpace(phrase) );
 		
+		//close scanner
+		numberScanner.close();		
 
 	}
 	/*
@@ -92,33 +101,53 @@ public class Pseudocode {
 				//add countChars to loop
 				for (int i= 0; i< phrase.length();i++)
 				{
+					
+					//if statement that says if the char at int i is space
+					//then add
 					if(phrase.charAt(i) == space)
 					{
 						x++;
 					}
 					
 				}
+				//return x value produced from this method
 				return x;
 				
 			
 		
 	}
 	/*
-	 * Ask user to input a phrase with a space
+	 *Ask user to input a phrase with a space
 	 *System.out.println("Please enter a phrase with a space.");
 	 *Instantiate a border that is set to the ' ' 
 	 */
 	private static String removeSpace(String phrase) {
 		
-		int space = phrase.indexOf(' ');
+		//set a char equal to the ' ' in the phrase
+		char space = ' ' ;
 		
-		String firstHalf = phrase.substring(0, space);
 		
-		String secondHalf = phrase.substring(space+1);
+		//create a for loop that runs if there is a space within the phrase
+		for(    ; phrase.indexOf(space)> -1;) {
 		
-		return firstHalf+secondHalf;
+			//instantiate a  string object that will be the characters BEFORE
+			//the ' ' 
+			String firstHalf = phrase.substring(0, phrase.indexOf(space));
+			
+			//instantiate a  string object that will be the characters AFTER
+			//the ' ' 
+			String secondHalf = phrase.substring(phrase.indexOf(space)+1);
+			
 				
+			//give 'phrase' a new value after running through the code
+				phrase = firstHalf + secondHalf;
+				
+				
+			
+		}
 		
+		//return the new phrase without spaces
+		return phrase;
 		
 	}
 	/**
@@ -134,19 +163,29 @@ public class Pseudocode {
 	public static int rollDice (int a, int b)
 	{
 		
+		//declare an int i and pass it the value of 1
 		int i = 1;
 		
+		//declare an int sum and pass it the value of 0
 		int sum = 0;
 		
+		//while loop that works when int i is less than or equal to int a
 		while (i<= a)
 		{
 
+			//declare the int roll that will roll a random number
 			int roll = (int)(Math.random()*b+1);
 			i++;
+			//add each roll to create a cumulative sum
 			sum+= roll;
 			
 		}
+		//print statement that states that rolling 'a amount of dice
+		// + 'b' times gives us the random generated number decided by the
+		// + rollDice method
 		System.out.println("Rolling " + a + " " +  b + "-sided dice gives " + sum);
+		
+		//return the cumulative sum created by this method
 		return sum;
 	}
 		
