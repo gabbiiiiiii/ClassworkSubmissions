@@ -1,0 +1,34 @@
+//printPrevNextElement assignment
+    //create an array of doubles to be passed into the method
+		double [] elements1 = { 3.26, 8.84, 9.63, -4.22, 12.80};
+		
+		//develop an int that will be an index within the array
+		int n1 = 3;
+		
+		//call method
+		printPrevNextElement(elements1, n1);
+	
+
+	}
+	/**
+	 * This method will be passed an array of doubles and an int of an index of this array
+	 * it is called to print out a statement declaring what the elements before and 
+	 * after that specific index is
+	 * 
+	 * @param elements1
+	 * @param n1
+	 */
+	private static void printPrevNextElement(double [] elements1, int n1) {
+		
+		//create a double that stands as the element before the index 3
+		double prevElement = elements1[n1-1];
+		
+		//create a double that stands as the element after the index 3
+		double nextElement = elements1[n1+1];
+		
+		//print the number before and after the n'th element
+		System.out.println("The number before the element at index 3 is " + prevElement + " and the"
+				+ " number after element is " + nextElement);
+		
+		
+	}
