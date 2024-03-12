@@ -1,0 +1,152 @@
+
+public class ArraysTutorial {
+
+	public static void main(String[] args) {
+		
+		//declare an array without any values
+		int[] arr1 = null;
+		
+		//declare an int array of four default values
+		int[] arr2 = new int [4];
+		
+		//declare an array with three values we want to set the literals of 4, 12, 28
+		int[] arr3 = { 4, 12, 28 };
+		
+		//print its contents?
+		System.out.println(arr1);
+		System.out.println(arr2);
+		System.out.println(arr3);
+		
+		//print its first element
+		System.out.println( "The first element is " + arr3[0] );
+		
+		//print its last element
+		System.out.println("The last element is " + arr3[arr3.length - 1] );
+		
+		//call method to print first and last element
+		printAndChangeFirstlast( arr3 );
+		
+		//print its first element
+		System.out.println( "The first element is " + arr3[0] );
+				
+		//print its last element
+		System.out.println("The last element is " + arr3[arr3.length - 1] );
+		
+		//call method to return sum of two indices
+		int sum = sumOfTwoElements ( arr3, 0, 2);
+		System.out.println("The sum is 2");
+		
+		//call method to return a new array with same length but all zeros
+		int [] newArr = makeSameLengthArrWithZeros( arr3 );
+				
+		
+	
+		//TASK 1: make a method that returns an ARRAY of the first
+		//and last elements of a passed array
+		int[] arr7 = { 10, 15, 29 };
+		
+		int [] sumArr = firstAndLastElements( arr7 );
+		
+		
+		//for example {4, 7, 12, 3} ---returns---> {4, 3}
+		
+		//TASK 2: make a method that changes an array. it should be 
+		// passed the array and the index you want to change
+		//it will divide specified index by 2
+		
+		//for example ({2, 4, 6, 8} , 2) ---> {2, 4, 3, 8}
+		
+		int[] evens = {1, 2, 3, 4};
+		int n = 2;
+		
+		divideElementByTwo(evens, n);
+		System.out.println("{" + evens[0] + "," + n + "," + evens[2] + "," + evens[3] + "}");
+		
+		
+		
+		
+		
+		//printPrevNextElement assignment
+		//create an array of doubles to be passed into the method
+		double [] elements1 = { 3.26, 8.84, 9.63, -4.22, 12.80};
+		
+		//develop an int that will be an index within the array
+		int n1 = 3;
+		
+		//call method
+		printPrevNextElement(elements1, n1);
+	
+
+	}
+	/**
+	 * This method will be passed an array of doubles and an int of an index of this array
+	 * it is called to print out a statement declaring what the elements before and 
+	 * after that specific index is
+	 * 
+	 * @param elements1
+	 * @param n1
+	 */
+	private static void printPrevNextElement(double [] elements1, int n1) {
+		
+		//create a double that stands as the element before the index 3
+		double prevElement = elements1[n1-1];
+		
+		//create a double that stands as the element after the index 3
+		double nextElement = elements1[n1+1];
+		
+		//print the number before and after the n'th element
+		System.out.println("The number before the element at index 3 is " + prevElement + " and the"
+				+ " number after element is " + nextElement);
+		
+		
+	}
+
+	private static void divideElementByTwo(int [] evens, int n) {
+		int quotient = (evens[n] / 2);
+		evens[2] = quotient;
+		
+	}
+
+	private static int[] firstAndLastElements(int[] arr7) {
+		
+		int firstElement = (arr7[0]);
+		int lastElement = (arr7 [arr7.length -1]);
+	
+		int arr8[] = { firstElement , lastElement };
+		
+		System.out.println("The first and last elements are " + arr7[0] + " and " + arr7[arr7.length-1] + ".");
+		return arr8;
+	}
+
+	private static int[] makeSameLengthArrWithZeros(int[] arr3) {
+		
+		int [] tempArr = new int [ arr3.length ];
+		
+		return tempArr;
+
+	}
+
+	private static int sumOfTwoElements(int[] arr3, int first, int second) {
+		
+		//return the sum of the first and second number in the array
+		return ( arr3[first] +  arr3[second] );
+		
+	
+	}
+
+	private static void printAndChangeFirstlast( int[] arr) {
+		// TODO Auto-generated method stub
+		System.out.println("The first and last elements are " + arr[0] + " and " + arr[arr.length-1] + ".");
+		
+		//change these elements to 1
+		//change first to 1
+		arr[0] = 1;
+		
+		//change last to 1
+		arr[arr.length - 1] = 1;
+		
+		System.out.println("The first and last elements are " + arr[0] + " and " + arr[arr.length-1] + ".");
+		
+	}
+
+}
