@@ -1,4 +1,3 @@
-
 public class TraversalMethodsHW {
 	
 	public static void main(String[] args) {
