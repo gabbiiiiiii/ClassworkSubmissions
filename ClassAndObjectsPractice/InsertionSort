@@ -1,0 +1,98 @@
+
+public class InsertionSorter {
+
+	public static void main(String[] args) {
+		
+		int [] arr1 = {2, 3, 4, 1, 5, 0};
+		
+		//int index = 5;
+		
+		//TASK 1 method
+		//arrayShifter( arr1, index);
+
+		//Example input array and resulting array: {2, 5, 7, 8, 10, 6} -----> {2, 5, 6, 7, 8, 10}
+		printArr(arr1);
+
+		//TASK 2: Change the previous method so that it is passed an int index and will 
+		//sort the value at that index instead of the last index. 
+		//(Precondition: the rest of the array will be sorted)
+		//Example input and resulting array: ( {2, 4, 6, 8, 5, 10, 12} , 3 ) -----> {2, 4, 5, 6, 8, 10, 12}
+
+		//TASK 3: Create a method insertionSort (that is passed an int array) with a 
+		//for loop that traverses the array from left to right. On each iteration of the loop 
+		//(in the work) write code that calls the arrayShifter method and passes it the array 
+		//and the current loop index.
+		insertionSort(arr1);
+		
+		//print the array now that it is in the correct order
+		printArr(arr1);
+	
+	}
+	/**
+	 * TASK 1: Create a method arrayShifter that when passed an array of ints, 
+	 * will take the last element and sort it into the right place. 
+	 * (Precondition: The array will be sorted except for the last element.)
+	 * @param arr
+	 */
+	private static void arrayShifter(int [] arr, int index) {
+		int temp = 0;
+		
+		//declare an int for index in order for task 2 to work
+		int n = index;
+		
+		//create while loop that moves the element to the right place
+		while (n>0 && arr[n] < arr[n-1]) {
+			//utilize int temp to help swap two elements
+			//set the element before n as temp
+			temp = arr[n-1];
+			//swap element before n to element n
+			arr[n-1] = arr[n];
+			//set element n to the element before it
+			arr[n] = temp;
+			
+			//moves backwards through the arr
+			n--;
+		}
+	}
+	/**
+	 * this method is used so we can see if the code works through the print statement	
+	 * @param arr
+	 */
+	private static void printArr(int[] arr) 
+		{
+			
+			//TASK 1: make a variable to be the traverser
+			int traverser;
+			
+			//TASK 2: make a loop. we want it to traverse every character, so it
+			//should go from start to finish of the loop
+			for (traverser = 0; traverser <= arr.length-1; traverser++) 
+			{
+				
+				//TASK 3: prove that it can count along
+				//with right amount of indeces
+				System.out.println(arr[traverser]);
+			}
+
+			
+		}
+				
+	/**
+	 * TASK 3: Create a method insertionSort (that is passed an int array) with a 
+	 * for loop that traverses the array from left to right. On each iteration of the loop 
+	 * (in the work) write code that calls the arrayShifter method and passes it the array 
+	 * and the current loop index.
+	 */
+	private static void insertionSort(int [] arr) {
+			
+		//create for loop so the method works for all elements
+		for (int index=0; index<= arr.length-1; index++) 
+		{
+			//call arrayShifter method to swap the element to the correct index of the array
+			arrayShifter(arr, index);
+		}
+	
+}
+	
+}
+
